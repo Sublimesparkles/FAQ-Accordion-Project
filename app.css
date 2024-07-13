@@ -1,0 +1,132 @@
+@font-face {
+    font-family: WorkSans;
+    src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: WorkSans-Italic;
+    src: url(./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+}
+
+.faq-container {
+    width: 435px;
+    position: relative;
+    margin-inline: auto;
+    margin-top: -130px;
+    padding: 20px 30px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 70px;
+}
+
+.faq-container + {
+    box-sizing: border-box;
+}
+
+.faq-item {
+    margin: 10px 0;
+    border-bottom: 1px solid hsl(275, 100%, 97%);
+    font-family: WorkSans;
+    cursor: pointer;
+}
+
+.faq-item__question {
+    font-weight: 700;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.faq-item__question:hover {
+    color: #A865B5;
+}
+
+.faq-item__answer{
+    padding: 5px;
+    display: none;
+    overflow: hidden;
+}
+
+.faq-item__toggle{
+    background-image: url(./assets/images/icon-plus.svg);
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: white;
+    position: relative;
+    top: -5px;
+}
+
+
+.faq-item.open .faq-item__answer{
+    display: block;
+    color: hsl(292, 16%, 49%);
+}
+
+.faq-item.open .faq-item__toggle{
+    background-image: url(./assets/images/icon-minus.svg);
+}
+
+.faq-header{
+    padding-left: 20px;
+    font-family: WorkSans;
+    font-size: 55px;
+}
+
+/*Media query*/
+
+@media screen and (max-width: 750px) {
+    .faq-container{
+        width: 330px;
+        margin-top: -70px;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .faq-container{
+        width: 310px;
+        margin-top: -40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .faq-container{
+        width: 290px;
+        margin-top: -40px;
+    }
+
+    img.background-pattern-desktop{
+        width: auto;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .faq-container{
+        width: 270px;
+        margin-top: -80px;
+        margin-inline: auto;
+        padding-inline: 20px;
+    }
+
+    img.background-pattern-desktop{
+    content: url(./assets/images/background-pattern-mobile.svg);
+    }
+
+    .faq-item__question{
+        width: 250px;
+    }
+    .faq-item__toggle{
+        width: 33px;
+    }
+}
+
+
+
+
+
+
